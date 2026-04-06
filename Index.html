@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Asteroids</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- PouchDB (base de datos local para guardar partidas y puntajes) -->
+    <script src="https://cdn.jsdelivr.net/npm/pouchdb@8.0.0/dist/pouchdb.min.js"></script>
+</head>
+<body>
+
+    <div id="menu">
+        <h1>ASTEROIDS</h1>
+        <button id="start">INICIAR JUEGO</button>
+        <!-- NUEVO BOTÓN SCORE (debajo del botón Iniciar) -->
+        <button id="score">SCORE</button>
+    </div>
+
+    <!-- NUEVA VENTANA MODAL PARA MOSTRAR ESTADÍSTICAS -->
+    <div id="score-modal" class="modal">
+        <div class="modal-content">
+            <h2>ESTADÍSTICAS</h2>
+            <p>Juegos jugados: <span id="games-played">0</span></p>
+            <p>Puntos acumulados: <span id="total-points">0</span></p>
+            <button id="close-score">CERRAR</button>
+        </div>
+    </div>
+
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
